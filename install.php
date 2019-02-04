@@ -3,6 +3,7 @@ error_reporting(false);
 session_start();
 include "shopify.php";
 include "config.php";
+$shop = $_REQUEST["shop"];
 if (empty($_SESSION['token'])) {    	
     if (!empty($shop)) {
         $apps = isset($_REQUEST['apps']) ? $_REQUEST['apps'] : false;
