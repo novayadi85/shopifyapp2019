@@ -33,7 +33,8 @@ if (empty($_SESSION['token'])) {
    
 }
 else {
-    echo "Index here";
+    echo "App here";
+    include("index.php");
     exit();  
 }
 
