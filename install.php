@@ -33,7 +33,7 @@ if (empty($_SESSION['token'])) {
    
 }
 else {
-    include("page.php");
+    include("index.php");
     exit();  
 }
 
