@@ -35,10 +35,13 @@ if (empty($_SESSION['token'])) {
 else {
     echo "<pre>";
     $Client = new ShopifyClient($_SESSION["shop"],$_SESSION["token"], SHOPIFY_API_KEY, SHOPIFY_SECRET);
-    print_r($Client);
+    //GET /admin/shop.json
     //echo "App here";
     //include("index.php");
     //exit();  
+    $store =  $Client->call("GET","/admin/shop.json");
+    print_r($store);
+    
 }
 
 ?>
