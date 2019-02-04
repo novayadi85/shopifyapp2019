@@ -34,7 +34,7 @@ if (empty($_SESSION['token'])) {
 }
 else {
     echo "App here";
-    include("index.php");
+    //include("index.php");
     exit();  
 }
 
