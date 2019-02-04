@@ -34,7 +34,8 @@ if (empty($_SESSION['token'])) {
 }
 else {
     echo "<pre>";
-    print_r($shopifyClient);
+    $Client = new ShopifyClient($_SESSION["shop"],$_SESSION["token"], SHOPIFY_API_KEY, SHOPIFY_SECRET);
+    print_r($Client);
     //echo "App here";
     //include("index.php");
     //exit();  
