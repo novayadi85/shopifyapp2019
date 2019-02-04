@@ -24,7 +24,9 @@
 			exit;
 		}
 		else{
-			die ("Invalid Request! We can't find rest token");
+			header("Location: ". "https://".$_SESSION['shop']."/admin/apps/".SHOPIFY_API_KEY);
+			exit;			
+
 		}
     }
 	else {
