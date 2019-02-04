@@ -6,10 +6,9 @@ include "config.php";
 $shop = $_REQUEST["shop"];
 if (empty($_SESSION['token'])) {    	
     if (!empty($shop)) {
-        $apps = isset($_REQUEST['apps']) ? $_REQUEST['apps'] : false;
         $shopifyClient = new ShopifyClient($shop, "", SHOPIFY_API_KEY, SHOPIFY_SECRET);
         // Redirect to authorize url
-        header("Location: " . $shopifyClient->getAuthorizeUrl(SHOPIFY_SCOPE, SHOPIFY_REDIRECT_URL, $apps ));
+        header("Location: " . $shopifyClient->getAuthorizeUrl(SHOPIFY_SCOPE, SHOPIFY_REDIRECT_URL));
         exit;
     }
     else {
