@@ -33,9 +33,11 @@ if (empty($_SESSION['token'])) {
    
 }
 else {
-    echo "App here";
+    echo "<pre>";
+    print_r($_REQUEST);
+    //echo "App here";
     //include("index.php");
-    exit();  
+    //exit();  
 }
 
 ?>
